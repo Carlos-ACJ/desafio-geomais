@@ -1,7 +1,4 @@
-<img src="https://www.vagasfloripa.com.br/wp-content/uploads/company_logos/2018/06/logo-geomais_Novo.png"
-     alt="Markdown Monster icon"
-     style="width: 400px"/>
-</br>
+
 # Desafio Geomais
 ## Cadastro de pessoas
 
