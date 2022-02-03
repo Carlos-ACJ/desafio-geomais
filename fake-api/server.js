@@ -3,7 +3,7 @@ const server = jsonServer.create()
 const router = jsonServer.router('../db.json')
 const middlewares = jsonServer.defaults()
 const PORT = 3001
-
+    //porta3001
 server.use(middlewares)
 server.use(router)
 
