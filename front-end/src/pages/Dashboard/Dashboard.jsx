@@ -18,6 +18,9 @@ export default function Dashboard() {
   const isFiltro1 = (users) => users.sexo === "Feminino";
   const filtro1 = users.filter(isFiltro1);
 
+  const isFiltro2 = (users) => users.sexo === "Masculino";
+  const filtro2 = users.filter(isFiltro2);
+
   return (
     <Content
       style={{
@@ -28,6 +31,18 @@ export default function Dashboard() {
       }}
     >
       <div>
+      <Statistic
+          title="Total de Usuários"
+          value={users.length}
+          align="center"
+        />
+        <br/>
+        <br/>
+        <Statistic
+          title="Total de Homens"
+          value={filtro2.length}
+          align="center"
+        />
         <Statistic
           title="Total de Mulheres"
           value={filtro1.length}

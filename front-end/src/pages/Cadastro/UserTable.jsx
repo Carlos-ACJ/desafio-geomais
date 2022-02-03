@@ -36,11 +36,10 @@ export default function UserTable() {
       .includes(searchTerm.toLowerCase());
   });
   //console.log(filtro);
-
   return (
     <div>
       <Input
-        placeholder="Buscar"
+        placeholder="Buscar   Nome/Rg/CPF/Ano"
         prefix={<SearchOutlined />}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
@@ -66,21 +65,20 @@ export default function UserTable() {
         }}
       >
         <ColumnGroup>
-          <Column align="left" title="Nome" dataIndex="nome" />
+          <Column 
+          align="left" 
+          title="Nome" 
+          dataIndex="nome" 
+          sorter={ (a, b) => a.nome.localeCompare(b.nome)}          
+          />
           <Column align="center" title="CPF" dataIndex="cpf" />
           <Column
             align="right"
             render={(_, values) => (
               <Space size="middle">
-                <>
                   <EditUser values={values} handleSaveUser={handleSaveUser} />
-                </>
-                <>
                   <DetailUser values={values} />
-                </>
-                <>
                   <Delet values={values} handleRemoveUser={handleRemoveUser} />
-                </>
               </Space>
             )}
           />

@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Modal,
-  Button,
-  Form,
-  Input,
-  Select,
-  DatePicker,
-} from "antd";
+import { Modal, Button, Form, Input, Select, DatePicker } from "antd";
 import { UserAddOutlined } from "@ant-design/icons";
 import MaskedInput from "antd-mask-input";
 
@@ -55,20 +48,21 @@ export default function AddUser({ handleSaveUser }) {
       >
         <div>
           <Form form={form} onFinish={onFinish}>
-            <Form.Item label="Nome" name="nome">
+            <Form.Item
+              label="Nome"
+              name="nome"
+              rules={[{ required: true, message: "Nome obrigatório!" }]}
+            >
               <Input />
             </Form.Item>
             <Form.Item label="Genero" name="sexo">
               <Select>
-                <Select.Option value="masculino">Masculino</Select.Option>
-                <Select.Option value="feminino">Feminino</Select.Option>
+                <Select.Option value="Masculino">Masculino</Select.Option>
+                <Select.Option value="Feminino">Feminino</Select.Option>
               </Select>
             </Form.Item>
             <Form.Item label="DatePicker" name="data_nasc">
-              <DatePicker
-                mode="date"
-                format="DD-MM-YYYY"
-              />
+              <DatePicker mode="date" format="DD-MM-YYYY" />
             </Form.Item>
             <Form.Item label="CPF" name="cpf">
               <MaskedInput mask="111.111.111-11" size="11" />

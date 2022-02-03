@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import MaskedInput from "antd-mask-input";
-import {
-  Modal,
-  Button,
-  Form,
-  Input,
-  Select,
-  DatePicker,
-} from "antd";
+import { Modal, Button, Form, Input, Select, DatePicker } from "antd";
 
 export default function EditUser({ values, handleSaveUser }) {
   const [form] = Form.useForm();
@@ -50,7 +43,11 @@ export default function EditUser({ values, handleSaveUser }) {
       >
         <div>
           <Form initialValues={values} form={form} onFinish={onFinish}>
-            <Form.Item label="Nome" name="nome">
+            <Form.Item
+              label="Nome"
+              name="nome"
+              rules={[{ required: true, message: "Nome obrigatório!" }]}
+            >
               <Input />
             </Form.Item>
             <Form.Item label="Genero" name="sexo">
