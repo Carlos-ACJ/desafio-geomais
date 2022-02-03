@@ -2,15 +2,15 @@
 # Desafio Geomais
 ## Cadastro de pessoas
 
-## *(Front-end)*
-
+### *(Front-end)*
 Front-end criado por Carlos Alberto Correia Jr para o desafio Geomais, UI criada com [Ant Design](https://ant.design/) utilizando  [Create React App](https://github.com/facebook/create-react-app)
+
 ---
-### Recursos
+#### Recursos
 Confirma abaixo implementados na aplicação: 
 
 ---
-#### Pessoa
+##### Pessoa
 * Cadastrar pessoa;
 * Editar pessoa;
 * Deletar pessoa;
