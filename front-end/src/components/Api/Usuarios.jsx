@@ -6,9 +6,6 @@ const api = axios.create({
 });
 
 export default {
-  columns() {
-    return { id: null, nome: "", cpf: "", rg: "", data_nasc: "", sexo: "" };
-  },
 
   async getUsers() {
     const response = await api.get("/pessoas?_sort=id&_order=desc");
